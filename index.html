@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header id="main-header">
+    <h1>CSS Variables</h1>
+  </header>
+  
+  <div class ="container">
+    <h1>This header is not blue because we <span class="one">defined</span> variable <span class="one">inside the box</span> and it <span class="two">works </span>for the header only <span class="two">inside the box.</span></h1>
+    <div class="grid">
+      <div class="box">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maxime autem amet sapiente voluptatibus? Doloribus, quod. Quisquam, facilis officia tenetur eos inventore voluptate, quae iste reiciendis, dolor cumque maxime ex.</p>
+      </div>
+      <div class="box">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque inventore, sed nihil magnam similique est voluptas consequatur? Praesentium iste nesciunt eum dolorum quam, rerum harum asperiores voluptatum facilis. Cupiditate, corrupti.</p>
+      </div>
+    </div>
+  </div>
+  <script> /*to get color of variable in style sheet with JavaScript*/
+const box = document.querySelector('.box');
+const boxStyles = getComputedStyle(box);
+const boxMainColor = boxStyles.getPropertyValue('--box-main-color');
+
+console.log(boxMainColor);
+/*change main header color with JavaScript*/
+const header = document.querySelector("#main-header");
+header.style.setProperty('--header-bg-color', boxMainColor);
+  </script>
+</body>
+</html>
