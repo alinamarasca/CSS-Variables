@@ -8,5 +8,5 @@
 [Following Advanced Button Hover Animations - CSS Only](https://www.youtube.com/watch?v=cH0TC9gWiAg&list=WL&index=35&t=970s) by **Web Dev Simplified**
 
 * set variables for the class
-* create 4 button anumations
+* create 4 button animations
 * extra challenge for myself - to make not that ugly color schemes
